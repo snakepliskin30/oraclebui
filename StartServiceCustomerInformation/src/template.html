@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <title>Generic Extension</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .container img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        margin-top: 3px;
+        margin-left: 5px;
+      }
+      body {
+        background-color: #fff;
+        color: #5c5c5c;
+        font-family: "Arial";
+        font-weight: 400;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #007dba;
+      }
+
+      .container-white {
+        background-color: #ffffff !important;
+        border: 2px solid #e4e5e7;
+      }
+
+      .container-white * {
+        color: #5c5c5c;
+      }
+
+      .container a:hover {
+        cursor: pointer;
+      }
+
+      .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .rightchevron {
+        margin-left: 20px;
+      }
+
+      h3,
+      i {
+        color: #ffffff;
+      }
+
+      .buttons a {
+        color: #1d92ef;
+        font-family: "jaf-bernina-sans", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 16px;
+        text-decoration: none;
+      }
+
+      i {
+        transition: 0.2s all linear;
+      }
+
+      i:hover {
+        cursor: pointer;
+      }
+
+      i.up {
+        transform: rotate(180deg);
+        transform-origin: center;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      input[type="text"]:disabled {
+        border: 1px #dfe4e7 solid;
+        background-color: #e6e6e68f;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header" class="container container-white">
+      <div class="left">
+        <h3>Customer Information</h3>
+        <img id="checkMark" src="./img/checkicon.png" class="hide" />
+      </div>
+      <i id="accordion" class="fas fa-chevron-down fa-lg"></i>
+    </div>
+    <script defer="defer" src="../vendorlib/moment.min.js"></script>
+    <script defer="defer" src="../vendorlib/promise-worker.js"></script>
+    <script defer="defer" src="../SoCoAPILibExt/Helpers.js"></script>
+  </body>
+</html>
